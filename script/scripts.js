@@ -2,6 +2,7 @@ const RANDOM_QUOTE_API_URL = "http://api.quotable.io/random";
 const quote_display = document.getElementById("quoteDisplay");
 const quote_input = document.getElementById("quoteInput");
 const timer = document.getElementById("timer");
+const res_btn = document.getElementById("restartBtn");
 
 function getRandomQuote() {
     return (fetch(RANDOM_QUOTE_API_URL)
@@ -64,5 +65,9 @@ function startTimer() {
 function getTimerTime() {
     return Math.floor((new Date() - startTime) / 1000);
 }
+
+res_btn.addEventListener('click', () => {
+    renderNewQuote();
+});
 
 renderNewQuote();
