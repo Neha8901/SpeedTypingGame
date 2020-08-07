@@ -10,8 +10,42 @@ function getRandomQuote() {
 
 async function renderNewQuote() {
     const quote = await getRandomQuote();
-    quote_display.innerText = quote;
+    quote_display.innerText = '';
+
+    quote.split('').forEach(character => {
+        const characterSpan = document.createElement('span');
+        characterSpan.innerText = character;
+        quote_display.appendChild(characterSpan);
+    });;
+
     quote_input.value = null;
 }
+
+quote_input.addEventListener('input', ()=> {
+    const quote_arr = quote_display.querySelectorAll('span');
+    const input_arr = quote_input.value.split('');
+
+    let correct = true;
+
+    quote_arr.forEach((characterSpan, index) => {
+        const char = input_arr[index];
+        if (char == null) {
+            characterSpan.classList.remove('correct');
+            characterSpan.classList.remove('wrong');
+            correct = false;
+        }
+        else if (char === characterSpan.innerText) {
+            characterSpan.classList.add('correct');
+            characterSpan.classList.remove('wrong');
+        }
+        else {
+            characterSpan.classList.remove('correct');
+            characterSpan.classList.add('wrong');
+            correct = false;
+        }
+    })
+
+    if (correct) renderNewQuote();
+});
 
 renderNewQuote();

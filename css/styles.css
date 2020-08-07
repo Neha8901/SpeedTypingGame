@@ -7,7 +7,7 @@
 html {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Courier, monospace;
     overflow-x: hidden;
-    line-height: 1.5;
+    line-height: 2.5rem;
     font-size: 2rem;
     font-weight: 400;
 }
@@ -25,7 +25,7 @@ body {
 
 .timer {
     position: absolute;
-    top: 1rem;
+    top: 2rem;
     font-size: 3rem;
     font-weight: bolder;
     color: rgb(124, 252, 0);
@@ -67,4 +67,13 @@ body {
     cursor: pointer;
     border-color: rgb(35, 20, 115);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.correct {
+    color: green;
+}
+
+.wrong {
+    color: red;
+    text-decoration: underline;
 }
