@@ -20,6 +20,7 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: rgb(75, 25, 225);
+    justify-content: space-between;
 }
 
 .timer {
@@ -31,6 +32,8 @@ body {
 }
 
 .container {
+    position: absolute;
+    top: 6rem;
     padding: 1rem;
     width: 600px;
     max-width: 90%;
@@ -41,8 +44,9 @@ body {
 .quote-display {
     font-size: 1rem;
     font-weight: bold;
-    margin: 0.1rem 0.5rem 1rem 0.5rem;
+    margin: 0.1rem 0.3rem 1rem 0.3rem;
     padding: 0.1rem 0.3rem;
+    text-align: justify;
 }
 
 .quote-input {
@@ -52,7 +56,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Courier, monospace;
     border-radius: 1rem;
     margin: auto;
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem 0.3rem;
     background-color: transparent;
     border: 0.1rem solid rgb(75, 25, 225);
     outline: none;
