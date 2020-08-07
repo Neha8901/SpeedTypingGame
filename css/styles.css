@@ -25,7 +25,7 @@ body {
 
 .timer {
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     font-size: 3rem;
     font-weight: bolder;
     color: rgb(124, 252, 0);
@@ -33,12 +33,26 @@ body {
 
 .container {
     position: absolute;
-    top: 6rem;
+    top: 5rem;
     padding: 1rem;
     width: 600px;
     max-width: 90%;
     background-color: rgb(124, 252, 0);
     border-radius: 1rem;
+}
+
+.restart-btn {
+    position: absolute;
+    bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    width: 300px;
+    max-width: 35%;
+    background-color: rgb(124, 252, 0);
+    color: rgb(75, 25, 225);
+    border-radius: 1rem;
+    border: none;
 }
 
 .quote-display {
